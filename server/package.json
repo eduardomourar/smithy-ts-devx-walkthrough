@@ -25,7 +25,7 @@
   "dependencies": {
     "@aws-smithy/server-apigateway": "^1.0.0-alpha.3",
     "@aws-smithy/server-common": "^1.0.0-alpha.3",
-    "@smithy-demo/string-wizard-service-ssdk": "workspace:server/codegen/build/smithyprojections/codegen/ts-server/typescript-ssdk-codegen",
+    "@smithy-demo/string-wizard-service-ssdk": "workspace:server/codegen/build/smithyprojections/codegen/string-server/typescript-ssdk-codegen",
     "@types/aws-lambda": "^8.10.85"
   },
   "devDependencies": {
@@ -62,6 +62,7 @@
     ]
   },
   "workspaces": [
-    "codegen/build/smithyprojections/codegen/ts-server/typescript-ssdk-codegen"
+    "codegen/build/smithyprojections/codegen/string-server/typescript-ssdk-codegen",
+    "codegen/build/smithyprojections/codegen/compute-service/typescript-ssdk-codegen"
   ]
 }

@@ -1,3 +1,13 @@
 {
-  "version" : "1.0"
+  "version" : "1.0",
+  "projections" : {
+    "compute-server" : {
+      "plugins" : {
+        "cloudformation": {
+          "service": "software.amazon.smithy.demo#Compute",
+          "organizationName": "Example"
+        }
+      }
+    }
+  }
 }

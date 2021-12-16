@@ -2,10 +2,20 @@
   "version" : "1.0",
   "outputDirectory" : "build/output",
   "projections" : {
-    "ts-client": {
+    "string-client": {
       "plugins": {
         "typescript-codegen": {
+          "service": "software.amazon.smithy.demo#StringWizard",
           "package" : "@smithy-demo/string-client",
+          "packageVersion": "0.0.1"
+        }
+      }
+    },
+    "compute-client": {
+      "plugins": {
+        "typescript-codegen": {
+          "service": "software.amazon.smithy.demo#Compute",
+          "package" : "@smithy-demo/compute-client",
           "packageVersion": "0.0.1"
         }
       }

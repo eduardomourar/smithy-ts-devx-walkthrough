@@ -2,21 +2,32 @@
   "version" : "1.0",
   "outputDirectory" : "build/output",
   "projections" : {
-    "ts-server" : {
+    "string-server" : {
       "plugins": {
+        "openapi": {
+          "service": "software.amazon.smithy.demo#StringWizard",
+          "protocol": "aws.protocols#restJson1",
+          "apiGatewayType" : "REST"
+        },
         "typescript-ssdk-codegen" : {
+          "service": "software.amazon.smithy.demo#StringWizard",
           "package" : "@smithy-demo/string-wizard-service-ssdk",
           "packageVersion": "0.0.1"
         }
       }
     },
-    "apigateway" : {
+    "compute-server" : {
       "imports" : ["model/"],
       "plugins" : {
         "openapi": {
-          "service": "software.amazon.smithy.demo#StringWizard",
+          "service": "software.amazon.smithy.demo#Compute",
           "protocol": "aws.protocols#restJson1",
           "apiGatewayType" : "REST"
+        },
+        "typescript-ssdk-codegen" : {
+          "service": "software.amazon.smithy.demo#Compute",
+          "package" : "@smithy-demo/compute-service-ssdk",
+          "packageVersion": "0.0.1"
         }
       }
     }
