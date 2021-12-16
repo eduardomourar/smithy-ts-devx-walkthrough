@@ -7,7 +7,17 @@
         "typescript-codegen": {
           "service": "software.amazon.smithy.demo#StringWizard",
           "package" : "@smithy-demo/string-client",
-          "packageVersion": "0.0.1"
+          "packageVersion": "0.0.1",
+          "packageJson": {
+            "license": "UNLICENSED",
+            "devDependencies": {
+              "downlevel-dts": "0.7.0",
+              "rimraf": "^3.0.0",
+              "typescript": "^4.4.4",
+              "@types/node": "^12.7.5",
+              "@types/pino": "6.3.12"
+            }
+          }
         }
       }
     },
@@ -16,7 +26,17 @@
         "typescript-codegen": {
           "service": "software.amazon.smithy.demo#Compute",
           "package" : "@smithy-demo/compute-client",
-          "packageVersion": "0.0.1"
+          "packageVersion": "0.0.1",
+          "packageJson": {
+            "license": "UNLICENSED",
+            "devDependencies": {
+              "downlevel-dts": "0.7.0",
+              "rimraf": "^3.0.0",
+              "typescript": "^4.4.4",
+              "@types/node": "^12.7.5",
+              "@types/pino": "6.3.12"
+            }
+          }
         }
       }
     }
